@@ -1,0 +1,102 @@
+/* 页面基础 */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.8;
+  font-size: 1.2em;  /* 保持字号不变 */
+}
+
+/* 页眉样式 */
+.site-header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 3px solid #000000;
+  background: linear-gradient(to right, #f0f0f0, #ffffff);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.site-header h1 {
+  margin: 0.2em 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.site-header .subtitle {
+  margin-top: 0.3em;
+  font-style: italic;
+  color: #555555;
+}
+
+/* 标题样式 */
+h1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #ddd;  /* 添加下划分割线 */
+  border-radius: 2px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  padding-bottom: 4px;
+  border-radius: 2px;
+}
+
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.2em; }
+
+/* 段落 */
+p {
+  margin: 0.3em 0;
+  padding-left: 6px;
+  
+}
+
+/* 列表 */
+ul, ol {
+  margin: 0.3em 0 0.3em 1.5em;
+  list-style: none;  /* 去掉圆点 */
+  padding-left: 0;
+  border-left: 3px solid #ddd;  /* 左侧小边框 */
+  padding-left: 10px;
+}
+
+/* 代码块 */
+pre, code {
+  font-family: "Fira Code", "Consolas", monospace;
+  background-color: #f9f9f9;
+  color: #000;
+  padding: 10px;
+  border-left: 4px solid #ccc;  /* 左侧装饰边 */
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* 超链接 */
+a {
+  color: #000000;
+  text-decoration: underline;
+  font-size: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #333333;
+}
+
+/* 页脚 */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 2px solid #ddd;
+  color: #555;
+  font-size: 0.85em;
+}
