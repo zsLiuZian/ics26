@@ -1,416 +1,102 @@
-/* ==========================================================================
-   ICS 2026 · 课程主页样式
-   设计基调：居中、沉稳、现代 —— 深靛蓝 + 绯红双主色，卡片式排版
-   ========================================================================== */
-
-/* ---------- 主题变量 ---------- */
-:root {
-  --bg: #eef1f7;              /* 页面底色 */
-  --card: #ffffff;            /* 卡片底色 */
-  --ink: #23263c;             /* 主文字 */
-  --ink-soft: #545a73;        /* 次级文字 */
-  --muted: #8b90a6;           /* 弱化文字 */
-
-  --brand: #262680;           /* 大班 · 深靛蓝 */
-  --brand-2: #d10b3c;         /* 小班 · 绯红 */
-  --accent: #3b4d9e;          /* 主强调色 */
-  --accent-soft: #d8ddf1;     /* 浅强调色（边框） */
-  --line: #e7eaf2;            /* 细分隔线 */
-
-  --shadow-hero: 0 24px 60px -22px rgba(24, 27, 74, 0.35);
-  --shadow-card: 0 10px 34px -14px rgba(24, 27, 74, 0.16);
-
-  --radius: 16px;
-}
-
-/* ---------- 基础重置 ---------- */
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
-
+/* 页面基础 */
 body {
-  margin: 0;
-  padding: 40px 20px 56px;
-  background:
-    radial-gradient(1200px 600px at 80% -10%, #ffffff 0%, rgba(255, 255, 255, 0) 60%),
-    linear-gradient(180deg, #f3f5fb 0%, var(--bg) 100%);
-  color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.85;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.8;
+  font-size: 1.2em;  /* 保持字号不变 */
 }
 
-::selection {
-  background: rgba(59, 77, 158, 0.18);
-}
-
-/* ---------- 布局骨架（整体居中） ---------- */
-.site-header,
-main,
-footer {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ---------- 页眉（Hero） ---------- */
+/* 页眉样式 */
 .site-header {
-  position: relative;
-  overflow: hidden;
   text-align: center;
-  padding: 48px 36px 44px;
-  margin-bottom: 28px;
-  border-radius: var(--radius);
-  color: #fff;
-  background: linear-gradient(135deg, #181a45 0%, var(--brand) 48%, #3b4d9e 100%);
-  box-shadow: var(--shadow-hero);
-}
-
-/* 顶部一抹亮色收边 + 底部柔光，增加层次 */
-.site-header::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 4px;
-  background: linear-gradient(90deg, #7c8cf8, #9aa4ff 40%, #c7c2ff 100%);
-}
-
-.site-header::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -90px;
-  width: 360px;
-  height: 360px;
-  transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 68%);
-  pointer-events: none;
+  padding: 20px;
+  border-bottom: 3px solid #000000;
+  background: linear-gradient(to right, #f0f0f0, #ffffff);
+  border-radius: 8px;
+  margin-bottom: 30px;
 }
 
 .site-header h1 {
-  margin: 0;
-  border: none;
-  font-size: 2.6rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  line-height: 1.15;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.22);
+  margin: 0.2em 0;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .site-header .subtitle {
-  margin: 0.7em 0 0;
-  font-style: normal;
-  font-size: 1.02rem;
-  color: rgba(255, 255, 255, 0.82);
-  letter-spacing: 0.5px;
+  margin-top: 0.3em;
+  font-style: italic;
+  color: #555555;
 }
 
-/* ---------- 正文卡片 ---------- */
-main {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 40px 50px;
-  margin-bottom: 28px;
-  box-shadow: var(--shadow-card);
-}
-
-/* ---------- 首段引言（欢迎语，居中横幅） ---------- */
-main > p {
-  margin: 0.2em 0 1.8em;
-  padding: 0.75em 1.2em;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--brand);
-  background: linear-gradient(90deg, transparent 0%, #eef0fb 22%, #eef0fb 78%, transparent 100%);
-  border-radius: 10px;
-}
-
-main > p em {
-  font-style: normal;
-}
-
-/* ---------- 标题层级（居中 + 装饰下划线） ---------- */
-main h1 {
-  position: relative;
-  margin: 1.9em 0 1em;
-  padding-bottom: 0.5em;
-  font-size: 1.62rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--brand);
-  text-align: center;
-  border: none;
-}
-
-main h1::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 58px;
-  height: 3px;
-  border-radius: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--brand-2));
-}
-
-main h1:first-of-type {
-  margin-top: 0.6em;
-}
-
-main h2 {
-  margin: 1.6em 0 0.6em;
-  font-size: 1.26rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: var(--accent);
+/* 标题样式 */
+h1 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #ddd;  /* 添加下划分割线 */
+  border-radius: 2px;
   text-align: center;
 }
 
-/* 周标题两侧点缀短横线 */
-main h2::before,
-main h2::after {
-  content: "";
-  display: inline-block;
-  width: 26px;
-  height: 1px;
-  background: var(--accent-soft);
-  vertical-align: 0.35em;
-  margin: 0 0.6em;
+h2 {
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  padding-bottom: 4px;
+  border-radius: 2px;
 }
 
-/* ---------- 顶部课程信息（居中） ---------- */
-main > ul:first-of-type {
-  list-style: none;
-  margin: 0.5em auto 1.6em;
-  padding: 0;
-  border-left: none;
-  text-align: center;
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.2em; }
+
+/* 段落 */
+p {
+  margin: 0.3em 0;
+  padding-left: 6px;
+  
 }
 
-main > ul:first-of-type > li {
-  padding: 0.12em 0;
+/* 列表 */
+ul, ol {
+  margin: 0.3em 0 0.3em 1.5em;
+  list-style: none;  /* 去掉圆点 */
+  padding-left: 0;
+  border-left: 3px solid #ddd;  /* 左侧小边框 */
+  padding-left: 10px;
 }
 
-main > ul:first-of-type > li::before {
-  display: none;
-}
-
-/* ---------- 列表（时间轴式，左对齐便于阅读） ---------- */
-main > ul {
-  list-style: none;
-  margin: 0.4em 0 0.7em 0.35em;
-  padding-left: 1.5em;
-  border-left: 2px solid var(--line);
-}
-
-main > ul > li {
-  position: relative;
-  padding: 0.5em 0.35em;
-}
-
-/* 时间轴节点 */
-main > ul > li::before {
-  content: "";
-  position: absolute;
-  left: -1.5em;
-  top: 1.05em;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--card);
-  border: 2.5px solid var(--accent);
-  transform: translateX(-50%);
-  transition: background 0.18s ease;
-}
-
-main > ul > li:hover::before {
-  background: var(--accent);
-}
-
-/* 空占位项（如“重要通知”下的空列表）隐藏 */
-main > ul > li:empty {
-  display: none;
-}
-
-/* 嵌套列表（小班学生回课） */
-main > ul > li > ul {
-  list-style: none;
-  margin: 0.35em 0 0.1em 0.4em;
-  padding-left: 1.3em;
-  border-left: 2px solid #eef0f8;
-}
-
-main > ul > li > ul > li {
-  position: relative;
-  padding: 0.22em 0 0.22em 0.1em;
-  font-size: 0.96rem;
-  color: var(--ink-soft);
-}
-
-main > ul > li > ul > li::before {
-  content: "";
-  position: absolute;
-  left: -1.3em;
-  top: 1em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #c6cde6;
-  transform: translateX(-50%);
-}
-
-/* ---------- 标签（大班 / 小班 / 学生） ---------- */
-.tag {
-  display: inline-block;
-  font-size: 0.84rem;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  line-height: 1.55;
-  vertical-align: 0.08em;
-  padding: 2px 11px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  white-space: nowrap;
-}
-
-.tag::before {
-  content: "";
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  margin-right: 6px;
-  vertical-align: 0.05em;
-}
-
-.tag-lecture {
-  color: var(--brand);
-  background: rgba(38, 38, 128, 0.07);
-  border-color: rgba(38, 38, 128, 0.28);
-}
-
-.tag-lecture::before {
-  background: var(--brand);
-}
-
-.tag-seminar {
-  color: var(--brand-2);
-  background: rgba(209, 11, 60, 0.06);
-  border-color: rgba(209, 11, 60, 0.26);
-}
-
-.tag-seminar::before {
-  background: var(--brand-2);
-}
-
-.tag-student {
-  color: #8a6b00;
-  background: #fff8de;
-  border-color: #f0d98c;
-}
-
-.tag-student::before {
-  background: #e6b422;
-}
-
-/* 测验 / 考试 · 红色虚线警示 */
-.exam {
-  font-weight: 700;
-  color: #c81e3f;
-  background: #fbecee;
-  padding: 2px 11px;
-  border-radius: 6px;
-  border: 1px dashed rgba(209, 11, 60, 0.45);
-  white-space: nowrap;
-}
-
-/* ---------- 链接 ---------- */
-a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-  border-bottom: 1px solid transparent;
-  transition: color 0.18s ease, border-color 0.18s ease;
-}
-
-a:hover {
-  color: var(--brand);
-  border-bottom-color: currentColor;
-}
-
-/* ---------- 代码 ---------- */
-pre,
-code {
-  font-family: "SF Mono", "Fira Code", "JetBrains Mono", Consolas, monospace;
-  font-size: 0.9em;
-}
-
-code {
-  background: #f2f4fa;
-  color: var(--brand);
-  padding: 0.15em 0.4em;
-  border-radius: 5px;
-}
-
-pre {
-  background: #f7f8fc;
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--accent);
-  border-radius: 8px;
-  padding: 14px 16px;
+/* 代码块 */
+pre, code {
+  font-family: "Fira Code", "Consolas", monospace;
+  background-color: #f9f9f9;
+  color: #000;
+  padding: 10px;
+  border-left: 4px solid #ccc;  /* 左侧装饰边 */
+  border-radius: 4px;
   overflow-x: auto;
 }
 
-pre code {
-  background: none;
-  padding: 0;
-  border-radius: 0;
+/* 超链接 */
+a {
+  color: #000000;
+  text-decoration: underline;
+  font-size: inherit;
 }
 
-/* ---------- 页脚 ---------- */
+a:hover {
+  text-decoration: none;
+  color: #333333;
+}
+
+/* 页脚 */
 footer {
   text-align: center;
-  margin-top: 4px;
-  padding: 12px 0;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-footer p {
-  margin: 0;
-}
-
-/* ---------- 响应式 ---------- */
-@media (max-width: 640px) {
-  body {
-    padding: 20px 12px 40px;
-    font-size: 16px;
-  }
-
-  .site-header {
-    padding: 34px 20px 32px;
-  }
-
-  .site-header h1 {
-    font-size: 2rem;
-  }
-
-  main {
-    padding: 28px 20px;
-  }
-
-  main h1 {
-    font-size: 1.4rem;
-  }
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 2px solid #ddd;
+  color: #555;
+  font-size: 0.85em;
 }
