@@ -1,6 +1,6 @@
 /* ==========================================================================
    ICS 2026 · 课程主页样式
-   设计基调：沉稳、现代、轻量 —— 深靛蓝 + 绯红双主色，卡片式排版
+   设计基调：居中、沉稳、现代 —— 深靛蓝 + 绯红双主色，卡片式排版
    ========================================================================== */
 
 /* ---------- 主题变量 ---------- */
@@ -42,8 +42,8 @@ body {
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
     "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.85;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -53,11 +53,11 @@ body {
   background: rgba(59, 77, 158, 0.18);
 }
 
-/* ---------- 布局骨架 ---------- */
+/* ---------- 布局骨架（整体居中） ---------- */
 .site-header,
 main,
 footer {
-  max-width: 920px;
+  max-width: 940px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -67,7 +67,7 @@ footer {
   position: relative;
   overflow: hidden;
   text-align: center;
-  padding: 44px 36px 40px;
+  padding: 48px 36px 44px;
   margin-bottom: 28px;
   border-radius: var(--radius);
   color: #fff;
@@ -99,9 +99,9 @@ footer {
 .site-header h1 {
   margin: 0;
   border: none;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   line-height: 1.15;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.22);
 }
@@ -118,38 +118,50 @@ footer {
 main {
   background: var(--card);
   border-radius: var(--radius);
-  padding: 38px 46px;
+  padding: 40px 50px;
   margin-bottom: 28px;
   box-shadow: var(--shadow-card);
 }
 
-/* ---------- 首段引言（欢迎语） ---------- */
+/* ---------- 首段引言（欢迎语，居中横幅） ---------- */
 main > p {
-  margin: 0.2em 0 1.4em;
-  padding: 0.75em 1.1em;
-  font-size: 1.06rem;
-  font-weight: 500;
+  margin: 0.2em 0 1.8em;
+  padding: 0.75em 1.2em;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--brand);
-  background: linear-gradient(90deg, #eef0fb 0%, #f7f8fd 100%);
-  border-left: 4px solid var(--accent);
-  border-radius: 8px;
+  background: linear-gradient(90deg, transparent 0%, #eef0fb 22%, #eef0fb 78%, transparent 100%);
+  border-radius: 10px;
 }
 
 main > p em {
   font-style: normal;
 }
 
-/* ---------- 标题层级 ---------- */
+/* ---------- 标题层级（居中 + 装饰下划线） ---------- */
 main h1 {
-  margin: 1.7em 0 0.85em;
-  padding: 0.1em 0 0.15em 0.55em;
-  font-size: 1.5rem;
+  position: relative;
+  margin: 1.9em 0 1em;
+  padding-bottom: 0.5em;
+  font-size: 1.62rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   color: var(--brand);
-  border-left: 5px solid var(--accent);
-  border-bottom: 1px solid var(--line);
-  text-align: left;
+  text-align: center;
+  border: none;
+}
+
+main h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 58px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--brand-2));
 }
 
 main h1:first-of-type {
@@ -157,20 +169,44 @@ main h1:first-of-type {
 }
 
 main h2 {
-  margin: 1.5em 0 0.55em;
-  padding: 0.05em 0 0.05em 0.55em;
-  font-size: 1.18rem;
+  margin: 1.6em 0 0.6em;
+  font-size: 1.26rem;
   font-weight: 700;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
   color: var(--accent);
-  border-left: 3px solid var(--accent-soft);
+  text-align: center;
 }
 
-main h2:first-child {
-  margin-top: 0.4em;
+/* 周标题两侧点缀短横线 */
+main h2::before,
+main h2::after {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 1px;
+  background: var(--accent-soft);
+  vertical-align: 0.35em;
+  margin: 0 0.6em;
 }
 
-/* ---------- 列表（时间轴式） ---------- */
+/* ---------- 顶部课程信息（居中） ---------- */
+main > ul:first-of-type {
+  list-style: none;
+  margin: 0.5em auto 1.6em;
+  padding: 0;
+  border-left: none;
+  text-align: center;
+}
+
+main > ul:first-of-type > li {
+  padding: 0.12em 0;
+}
+
+main > ul:first-of-type > li::before {
+  display: none;
+}
+
+/* ---------- 列表（时间轴式，左对齐便于阅读） ---------- */
 main > ul {
   list-style: none;
   margin: 0.4em 0 0.7em 0.35em;
@@ -180,8 +216,7 @@ main > ul {
 
 main > ul > li {
   position: relative;
-  padding: 0.5em 0.35em 0.5em 0.35em;
-  transition: background 0.18s ease;
+  padding: 0.5em 0.35em;
 }
 
 /* 时间轴节点 */
@@ -219,7 +254,7 @@ main > ul > li > ul {
 main > ul > li > ul > li {
   position: relative;
   padding: 0.22em 0 0.22em 0.1em;
-  font-size: 0.95rem;
+  font-size: 0.96rem;
   color: var(--ink-soft);
 }
 
@@ -235,54 +270,69 @@ main > ul > li > ul > li::before {
   transform: translateX(-50%);
 }
 
-/* ---------- 徽章（大班 / 小班 / 学生） ---------- */
-/* 大班 · 深靛蓝 */
-span[style*="262680"] {
+/* ---------- 标签（大班 / 小班 / 学生） ---------- */
+.tag {
   display: inline-block;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 600;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
   line-height: 1.55;
   vertical-align: 0.08em;
-  padding: 3px 11px !important;
-  border-radius: 8px !important;
-  box-shadow: 0 2px 8px rgba(38, 38, 128, 0.28);
+  padding: 2px 11px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  white-space: nowrap;
 }
 
-/* 小班 · 绯红 */
-span[style*="d10b3c"] {
+.tag::before {
+  content: "";
   display: inline-block;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  line-height: 1.55;
-  vertical-align: 0.08em;
-  padding: 3px 11px !important;
-  border-radius: 8px !important;
-  box-shadow: 0 2px 8px rgba(209, 11, 60, 0.26);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: 0.05em;
 }
 
-/* 学生回课 · 黄色标签 */
-span[style*="FFFF00"] {
-  display: inline-block;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #6b5200;
-  letter-spacing: 0.2px;
-  line-height: 1.55;
-  vertical-align: 0.08em;
-  padding: 2px 9px !important;
-  border-radius: 8px !important;
-  border: 1px solid rgba(180, 140, 0, 0.28);
-  box-shadow: 0 1px 4px rgba(120, 92, 0, 0.08);
+.tag-lecture {
+  color: var(--brand);
+  background: rgba(38, 38, 128, 0.07);
+  border-color: rgba(38, 38, 128, 0.28);
 }
 
-/* 测验 / 考试 · 红色强调 */
-span[style*="color: red"] {
+.tag-lecture::before {
+  background: var(--brand);
+}
+
+.tag-seminar {
+  color: var(--brand-2);
+  background: rgba(209, 11, 60, 0.06);
+  border-color: rgba(209, 11, 60, 0.26);
+}
+
+.tag-seminar::before {
+  background: var(--brand-2);
+}
+
+.tag-student {
+  color: #8a6b00;
+  background: #fff8de;
+  border-color: #f0d98c;
+}
+
+.tag-student::before {
+  background: #e6b422;
+}
+
+/* 测验 / 考试 · 红色虚线警示 */
+.exam {
   font-weight: 700;
-  padding: 2px 9px;
+  color: #c81e3f;
+  background: #fbecee;
+  padding: 2px 11px;
   border-radius: 6px;
-  background: #fbecec;
+  border: 1px dashed rgba(209, 11, 60, 0.45);
+  white-space: nowrap;
 }
 
 /* ---------- 链接 ---------- */
@@ -345,11 +395,11 @@ footer p {
 @media (max-width: 640px) {
   body {
     padding: 20px 12px 40px;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .site-header {
-    padding: 32px 20px 30px;
+    padding: 34px 20px 32px;
   }
 
   .site-header h1 {
@@ -357,10 +407,10 @@ footer p {
   }
 
   main {
-    padding: 26px 20px;
+    padding: 28px 20px;
   }
 
   main h1 {
-    font-size: 1.32rem;
+    font-size: 1.4rem;
   }
 }
