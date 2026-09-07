@@ -1,102 +1,366 @@
-/* 页面基础 */
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  line-height: 1.8;
-  font-size: 1.2em;  /* 保持字号不变 */
+/* ==========================================================================
+   ICS 2026 · 课程主页样式
+   设计基调：沉稳、现代、轻量 —— 深靛蓝 + 绯红双主色，卡片式排版
+   ========================================================================== */
+
+/* ---------- 主题变量 ---------- */
+:root {
+  --bg: #eef1f7;              /* 页面底色 */
+  --card: #ffffff;            /* 卡片底色 */
+  --ink: #23263c;             /* 主文字 */
+  --ink-soft: #545a73;        /* 次级文字 */
+  --muted: #8b90a6;           /* 弱化文字 */
+
+  --brand: #262680;           /* 大班 · 深靛蓝 */
+  --brand-2: #d10b3c;         /* 小班 · 绯红 */
+  --accent: #3b4d9e;          /* 主强调色 */
+  --accent-soft: #d8ddf1;     /* 浅强调色（边框） */
+  --line: #e7eaf2;            /* 细分隔线 */
+
+  --shadow-hero: 0 24px 60px -22px rgba(24, 27, 74, 0.35);
+  --shadow-card: 0 10px 34px -14px rgba(24, 27, 74, 0.16);
+
+  --radius: 16px;
 }
 
-/* 页眉样式 */
+/* ---------- 基础重置 ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px 56px;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, #ffffff 0%, rgba(255, 255, 255, 0) 60%),
+    linear-gradient(180deg, #f3f5fb 0%, var(--bg) 100%);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(59, 77, 158, 0.18);
+}
+
+/* ---------- 布局骨架 ---------- */
+.site-header,
+main,
+footer {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- 页眉（Hero） ---------- */
 .site-header {
+  position: relative;
+  overflow: hidden;
   text-align: center;
-  padding: 20px;
-  border-bottom: 3px solid #000000;
-  background: linear-gradient(to right, #f0f0f0, #ffffff);
-  border-radius: 8px;
-  margin-bottom: 30px;
+  padding: 44px 36px 40px;
+  margin-bottom: 28px;
+  border-radius: var(--radius);
+  color: #fff;
+  background: linear-gradient(135deg, #181a45 0%, var(--brand) 48%, #3b4d9e 100%);
+  box-shadow: var(--shadow-hero);
+}
+
+/* 顶部一抹亮色收边 + 底部柔光，增加层次 */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7c8cf8, #9aa4ff 40%, #c7c2ff 100%);
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -90px;
+  width: 360px;
+  height: 360px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 68%);
+  pointer-events: none;
 }
 
 .site-header h1 {
-  margin: 0.2em 0;
-  font-weight: bold;
-  letter-spacing: 1px;
+  margin: 0;
+  border: none;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.15;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.22);
 }
 
 .site-header .subtitle {
-  margin-top: 0.3em;
-  font-style: italic;
-  color: #555555;
+  margin: 0.7em 0 0;
+  font-style: normal;
+  font-size: 1.02rem;
+  color: rgba(255, 255, 255, 0.82);
+  letter-spacing: 0.5px;
 }
 
-/* 标题样式 */
-h1 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  padding-bottom: 4px;
-  border-bottom: 2px solid #ddd;  /* 添加下划分割线 */
-  border-radius: 2px;
-  text-align: center;
+/* ---------- 正文卡片 ---------- */
+main {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 38px 46px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-card);
 }
 
-h2 {
-  margin-top: 1em;
-  margin-bottom: 0.3em;
-  padding-bottom: 4px;
-  border-radius: 2px;
+/* ---------- 首段引言（欢迎语） ---------- */
+main > p {
+  margin: 0.2em 0 1.4em;
+  padding: 0.75em 1.1em;
+  font-size: 1.06rem;
+  font-weight: 500;
+  color: var(--brand);
+  background: linear-gradient(90deg, #eef0fb 0%, #f7f8fd 100%);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
 }
 
-h1 { font-size: 1.5em; }
-h2 { font-size: 1.2em; }
-
-/* 段落 */
-p {
-  margin: 0.3em 0;
-  padding-left: 6px;
-  
+main > p em {
+  font-style: normal;
 }
 
-/* 列表 */
-ul, ol {
-  margin: 0.3em 0 0.3em 1.5em;
-  list-style: none;  /* 去掉圆点 */
-  padding-left: 0;
-  border-left: 3px solid #ddd;  /* 左侧小边框 */
-  padding-left: 10px;
+/* ---------- 标题层级 ---------- */
+main h1 {
+  margin: 1.7em 0 0.85em;
+  padding: 0.1em 0 0.15em 0.55em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--brand);
+  border-left: 5px solid var(--accent);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
 }
 
-/* 代码块 */
-pre, code {
-  font-family: "Fira Code", "Consolas", monospace;
-  background-color: #f9f9f9;
-  color: #000;
-  padding: 10px;
-  border-left: 4px solid #ccc;  /* 左侧装饰边 */
-  border-radius: 4px;
-  overflow-x: auto;
+main h1:first-of-type {
+  margin-top: 0.6em;
 }
 
-/* 超链接 */
+main h2 {
+  margin: 1.5em 0 0.55em;
+  padding: 0.05em 0 0.05em 0.55em;
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--accent);
+  border-left: 3px solid var(--accent-soft);
+}
+
+main h2:first-child {
+  margin-top: 0.4em;
+}
+
+/* ---------- 列表（时间轴式） ---------- */
+main > ul {
+  list-style: none;
+  margin: 0.4em 0 0.7em 0.35em;
+  padding-left: 1.5em;
+  border-left: 2px solid var(--line);
+}
+
+main > ul > li {
+  position: relative;
+  padding: 0.5em 0.35em 0.5em 0.35em;
+  transition: background 0.18s ease;
+}
+
+/* 时间轴节点 */
+main > ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1.5em;
+  top: 1.05em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 2.5px solid var(--accent);
+  transform: translateX(-50%);
+  transition: background 0.18s ease;
+}
+
+main > ul > li:hover::before {
+  background: var(--accent);
+}
+
+/* 空占位项（如“重要通知”下的空列表）隐藏 */
+main > ul > li:empty {
+  display: none;
+}
+
+/* 嵌套列表（小班学生回课） */
+main > ul > li > ul {
+  list-style: none;
+  margin: 0.35em 0 0.1em 0.4em;
+  padding-left: 1.3em;
+  border-left: 2px solid #eef0f8;
+}
+
+main > ul > li > ul > li {
+  position: relative;
+  padding: 0.22em 0 0.22em 0.1em;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+main > ul > li > ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1.3em;
+  top: 1em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c6cde6;
+  transform: translateX(-50%);
+}
+
+/* ---------- 徽章（大班 / 小班 / 学生） ---------- */
+/* 大班 · 深靛蓝 */
+span[style*="262680"] {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  line-height: 1.55;
+  vertical-align: 0.08em;
+  padding: 3px 11px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(38, 38, 128, 0.28);
+}
+
+/* 小班 · 绯红 */
+span[style*="d10b3c"] {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  line-height: 1.55;
+  vertical-align: 0.08em;
+  padding: 3px 11px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(209, 11, 60, 0.26);
+}
+
+/* 学生回课 · 黄色标签 */
+span[style*="FFFF00"] {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #6b5200;
+  letter-spacing: 0.2px;
+  line-height: 1.55;
+  vertical-align: 0.08em;
+  padding: 2px 9px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(180, 140, 0, 0.28);
+  box-shadow: 0 1px 4px rgba(120, 92, 0, 0.08);
+}
+
+/* 测验 / 考试 · 红色强调 */
+span[style*="color: red"] {
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 6px;
+  background: #fbecec;
+}
+
+/* ---------- 链接 ---------- */
 a {
-  color: #000000;
-  text-decoration: underline;
-  font-size: inherit;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
 }
 
 a:hover {
-  text-decoration: none;
-  color: #333333;
+  color: var(--brand);
+  border-bottom-color: currentColor;
 }
 
-/* 页脚 */
+/* ---------- 代码 ---------- */
+pre,
+code {
+  font-family: "SF Mono", "Fira Code", "JetBrains Mono", Consolas, monospace;
+  font-size: 0.9em;
+}
+
+code {
+  background: #f2f4fa;
+  color: var(--brand);
+  padding: 0.15em 0.4em;
+  border-radius: 5px;
+}
+
+pre {
+  background: #f7f8fc;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 14px 16px;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* ---------- 页脚 ---------- */
 footer {
   text-align: center;
-  margin-top: 40px;
-  padding-top: 10px;
-  border-top: 2px solid #ddd;
-  color: #555;
-  font-size: 0.85em;
+  margin-top: 4px;
+  padding: 12px 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 640px) {
+  body {
+    padding: 20px 12px 40px;
+    font-size: 15px;
+  }
+
+  .site-header {
+    padding: 32px 20px 30px;
+  }
+
+  .site-header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 26px 20px;
+  }
+
+  main h1 {
+    font-size: 1.32rem;
+  }
 }
