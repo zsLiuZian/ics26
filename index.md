@@ -17,7 +17,7 @@ layout: default
 
 # 课程大纲
 
-- 注：小班回课安排可能随大班授课略有调整
+- 注：小班安排可能随大班授课略有调整
 
 ## 第1周
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
