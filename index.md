@@ -5,7 +5,7 @@ layout: default
 
 ***欢迎选修计算机系统导论（ICS）课程！***
 
-- 小班编号：20
+- 小班编号：22
 - 老师：[卓有为](https://www.youwei.xyz/) youwei@pku.edu.cn
 - 助教：刘梓安 aiiaa@stu.pku.edu.cn 15018014105
 - 上课时间：每周三第10\~11节（18:40\~20:30）
