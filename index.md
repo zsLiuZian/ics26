@@ -13,6 +13,7 @@ layout: default
 
 # 重要通知
 
+- 2026.9.13：Lab1已发布，截止时间为9.28 8:00
 - 2026.9.12：请尽快完成 xLab 平台节点创建并连接 VSCode
 
 # 课程大纲
@@ -78,8 +79,8 @@ layout: default
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.10.21（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">赵伟硕 Lec9</span>
-  - <span style="background-color: #FFFF00; padding: 4px 4px">叶尔努尔 Lec10</span>
-  - 助教Week7 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">彭在麟 Lec10</span>
+  - 助教Week7
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.10.22（周四）：**Lec11 Processor Arch: Pipelined** 
@@ -124,7 +125,7 @@ layout: default
   大班</span> 2026.11.16（周一）：<span style="color: red; font-weight: bold;">阶段测验2 Lec9~Lec17</span> 
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.11.18（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">彭在麟 Lec17</span> 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">叶尔努尔 Lec17</span> 
   - 助教Week11
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
@@ -135,7 +136,7 @@ layout: default
   大班</span> 2026.11.23（周一）：**Lec18 System Level I/O**
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.11.25（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">李彰宇 Lec18</span> 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">陈高远 Lec18</span> 
   - 助教Week12 
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.11.26（周四）：**Lec19 Virtual Memory: Concepts**
@@ -146,7 +147,7 @@ layout: default
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.12.2（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">金于珑 Lec19</span> 
-  - <span style="background-color: #FFFF00; padding: 4px 4px">陈高远 Lec20</span> 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">张睿超 Lec20</span> 
   - 助教Week12
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
@@ -157,7 +158,7 @@ layout: default
   大班</span> 2026.12.7（周一）：**Lec22 Network Programming I** 
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.12.9（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">张睿超 Lec21</span> 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">彭在麟 Lec21</span> 
   - <span style="background-color: #FFFF00; padding: 4px 4px">肖涵 Lec22</span> 
   - 助教Week14
   
@@ -199,6 +200,6 @@ layout: default
 # 相关链接
 
 - [PKU XLab](https://xlab.pku.edu.cn/)
-- [Autolab](http://162.105.31.232/auth/users/sign_in)
+- [Autolab](https://autolab.pku-ics.com/)
 - [北大教学网](https://course.pku.edu.cn/)
 
