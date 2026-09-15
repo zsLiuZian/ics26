@@ -24,11 +24,11 @@ layout: default
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.9.7（周一）：**Lec1 Overview** [[课件](resource/lecture/ICS01-overview-20260907.pdf)]
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.9.10（周四）：**Lec2 Bits and Bytes/Integers**  [[课件](resource/lecture/ICS02-bits-bytes-ints-20260910.pdf)]
+  大班</span> 2026.9.10（周四）：**Lec2 Bits and Bytes/Integers**  [[课件](resource/lecture/ICS02-bits-bytes-ints-20260910.pdf)/[研讨+作业](resource/homework/ICS小班研讨题和作业题-第2讲.pdf)]
 
 ## 第2周
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.9.14（周一）：**Lec3 Floating Point** [[课件](resource/lecture/ICS03-float-20260914.pdf)]
+  大班</span> 2026.9.14（周一）：**Lec3 Floating Point** [[课件](resource/lecture/ICS03-float-20260914.pdf)/[研讨+作业](resource/homework/ICS小班研讨题和作业题-第3讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.9.16（周三）：
   - 助教Week2 
