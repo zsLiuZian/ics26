@@ -13,7 +13,8 @@ layout: default
 
 # 重要通知
 
-- 2026.9.13：Lab1已发布，截止时间为9.28 8:00
+- **2026.9.16：第2、3讲作业已发布，截止时间为9.30 23:59**
+- **2026.9.13：Lab1已发布，截止时间为9.28 8:00**
 - 2026.9.12：请尽快完成 xLab 平台节点创建并连接 VSCode
 
 # 课程大纲
@@ -31,7 +32,7 @@ layout: default
   大班</span> 2026.9.14（周一）：**Lec3 Floating Point** [[课件](resource/lecture/ICS03-float-20260914.pdf)/[研讨+作业](resource/homework/ICS小班研讨题和作业题-第3讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.9.16（周三）：
-  - 助教Week2 
+  - 助教Week2 [课件](resource/seminar/Week2.pptx)
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.9.17（周四）：**Lec4 Machine Prog: Basics** 
