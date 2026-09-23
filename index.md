@@ -13,8 +13,10 @@ layout: default
 
 # 重要通知
 
-- **2026.9.16：第2、3讲作业已发布，截止时间为9.30 23:59**
-- **2026.9.13：Lab1已发布，截止时间为9.28 8:00**
+- **2026.9.23：第 4、5 讲作业已发布，截止时间为 10.7 23:59**
+- **2026.9.22：Lab2已发布，截止时间为 10.13 23:59**
+- **2026.9.16：第 2、3 讲作业已发布，截止时间为 9.30 23:59**
+- **2026.9.13：Lab1 已发布，截止时间为 9.28 8:00**
 - 2026.9.12：请尽快完成 xLab 平台节点创建并连接 VSCode
 
 # 课程大纲
@@ -32,19 +34,19 @@ layout: default
   大班</span> 2026.9.14（周一）：**Lec3 Floating Point** [[课件](resource/lecture/ICS03-float-20260914.pdf)/[研讨+作业](resource/homework/ICS小班研讨题和作业题-第3讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.9.16（周三）：
-  - 助教Week2 [课件](resource/seminar/Week2.pptx)
+  - 助教Week2 [[课件](resource/seminar/Week2.pptx)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.9.17（周四）：**Lec4 Machine Prog: Basics** 
+  大班</span> 2026.9.17（周四）：**Lec4 Machine Prog: Basics** [[课件](resource/lecture/ICS04-machine-basics-20260917.pdf)/[研讨+作业](resource/homework/ICS小班研讨题和作业题-第4讲.pdf)]
 
 ## 第3周
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.9.21（周一）：**Lec5 Machine Prog: Control** 
+  大班</span> 2026.9.21（周一）：**Lec5 Machine Prog: Control** [[课件](resource/lecture/ICS05-machine-control-20260921.pdf)/[研讨+作业](resource/homework/ICS小班研讨题和作业题-第5讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.9.23（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">陈高远 Lec4</span> 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">陈高远 Lec4</span> [[课件](resource/seminar/Lec4.pptx)]
   - <span style="background-color: #FFFF00; padding: 4px 4px">曹宸睿 Lec5</span> 
-  - 助教Week3 
+  - 助教Week3 [[课件](resource/seminar/Week3.pptx)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.9.24（周四）：**Lec6 Machine Prog: Procedures** 
@@ -202,5 +204,6 @@ layout: default
 
 - [PKU XLab](https://xlab.pku.edu.cn/)
 - [Autolab](https://autolab.pku-ics.com/)
+- [作业参考答案](https://dreamanddead.github.io/CSAPP-3e-Solutions/)
 - [北大教学网](https://course.pku.edu.cn/)
 
