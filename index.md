@@ -13,10 +13,11 @@ layout: default
 
 # 重要通知
 
+- **2026.9.28：第 6、7 讲作业已发布，截止时间为 10.14 23:59**
 - **2026.9.23：第 4、5 讲作业已发布，截止时间为 10.7 23:59**
-- **2026.9.22：Lab2已发布，截止时间为 10.13 23:59**
+- **2026.9.22：Lab2 已发布，截止时间为 10.13 23:59**
 - **2026.9.16：第 2、3 讲作业已发布，截止时间为 9.30 23:59**
-- **2026.9.13：Lab1 已发布，截止时间为 9.28 8:00**
+- 2026.9.13：Lab1 已发布，截止时间为 9.28 8:00
 - 2026.9.12：请尽快完成 xLab 平台节点创建并连接 VSCode
 
 # 课程大纲
@@ -49,11 +50,11 @@ layout: default
   - 助教Week3 [[课件](resource/seminar/Week3.pptx)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.9.24（周四）：**Lec6 Machine Prog: Procedures** 
+  大班</span> 2026.9.24（周四）：**Lec6 Machine Prog: Procedures** [[课件](resource/lecture/ICS06-machine-procedures-20260924.pdf)/[研讨+作业](resource/homework/ICS小班研讨题和作业题-第6讲.pdf)]
 
 ## 第4周
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.9.28（周一）：**Lec7 Machine Prog: Data** 
+  大班</span> 2026.9.28（周一）：**Lec7 Machine Prog: Data** [[课件](resource/lecture/ICS07-machine-data-20260928.pdf)/[研讨+作业](resource/homework/ICS小班研讨题和作业题-第7讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.9.30（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">张睿超 Lec6</span> 
