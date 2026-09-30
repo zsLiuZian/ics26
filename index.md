@@ -46,8 +46,8 @@ layout: default
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.9.23（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">陈高远 Lec4</span> [[课件](resource/seminar/Lec4.pptx)]
-  - <span style="background-color: #FFFF00; padding: 4px 4px">曹宸睿 Lec5</span> 
-  - 助教Week3 [[课件](resource/seminar/Week3.pptx)]
+  - <span style="background-color: #FFFF00; padding: 4px 4px">曹宸睿 Lec5</span> [[课件](resource/seminar/Lec5.pptx)]
+  - 助教 Week3 [[课件](resource/seminar/Week3.pptx)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.9.24（周四）：**Lec6 Machine Prog: Procedures** [[课件](resource/lecture/ICS06-machine-procedures-20260924.pdf)/[研讨+作业](resource/homework/ICS小班研讨题和作业题-第6讲.pdf)]
@@ -58,8 +58,8 @@ layout: default
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.9.30（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">张睿超 Lec6</span> 
-  - <span style="background-color: #FFFF00; padding: 4px 4px">王佳祺 Lec7</span> 
-  - 助教Week4 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">王佳祺 Lec7</span> [[课件](resource/seminar/Lec7.pptx)]
+  - 助教 Week4 [[课件](resource/seminar/Week3.pptx)/[补充](https://en.wikipedia.org/wiki/Call-with-current-continuation)]
 
 ## 第5周
 
@@ -72,7 +72,7 @@ layout: default
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.10.14（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">肖涵 Lec8</span> 
-  - 助教Week6 
+  - 助教 Week6 
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.10.15（周四）：**Lec9 Processor Arch: ISA&Logic** 
@@ -84,7 +84,7 @@ layout: default
   小班</span> 2026.10.21（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">赵伟硕 Lec9</span>
   - <span style="background-color: #FFFF00; padding: 4px 4px">彭在麟 Lec10</span>
-  - 助教Week7
+  - 助教 Week7
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.10.22（周四）：**Lec11 Processor Arch: Pipelined** 
@@ -96,7 +96,7 @@ layout: default
   小班</span> 2026.10.28（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">吴煜祺 Lec11</span> 
   - <span style="background-color: #FFFF00; padding: 4px 4px">张峻硕 Lec12</span> 
-  - 助教Week8 
+  - 助教 Week8 
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.10.29（周四）：**Lec13 Cache Memories** 
 
@@ -107,7 +107,7 @@ layout: default
   小班</span> 2026.11.4（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">郑周涵予 Lec13</span> 
   - <span style="background-color: #FFFF00; padding: 4px 4px">王振恺 Lec14</span> 
-  - 助教Week9 
+  - 助教 Week9 
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.11.5（周四）：**Lec15 Linking** 
@@ -119,7 +119,7 @@ layout: default
   小班</span> 2026.11.11（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">吕俊辰 Lec15</span> 
   - <span style="background-color: #FFFF00; padding: 4px 4px">聂于涵 Lec16</span> 
-  - 助教Week10 
+  - 助教 Week10 
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.11.12（周四）：**Lec17 ECF: Signals & Nonlocal Jumps**
@@ -130,7 +130,7 @@ layout: default
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.11.18（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">叶尔努尔 Lec17</span> 
-  - 助教Week11
+  - 助教 Week11
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.11.19（周四）：专题讲座
@@ -141,7 +141,7 @@ layout: default
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.11.25（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">陈高远 Lec18</span> 
-  - 助教Week12 
+  - 助教 Week12 
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.11.26（周四）：**Lec19 Virtual Memory: Concepts**
 
@@ -152,7 +152,7 @@ layout: default
   小班</span> 2026.12.2（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">金于珑 Lec19</span> 
   - <span style="background-color: #FFFF00; padding: 4px 4px">张睿超 Lec20</span> 
-  - 助教Week12
+  - 助教 Week12
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.12.3（周四）：**Lec21 Dynamic Memory Allocation**
@@ -164,7 +164,7 @@ layout: default
   小班</span> 2026.12.9（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">彭在麟 Lec21</span> 
   - <span style="background-color: #FFFF00; padding: 4px 4px">肖涵 Lec22</span> 
-  - 助教Week14
+  - 助教 Week14
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.12.10（周四）：**Lec23 Network Programming II**
@@ -176,7 +176,7 @@ layout: default
   小班</span> 2026.12.16（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">王佳祺 Lec23</span> 
   - <span style="background-color: #FFFF00; padding: 4px 4px">曹宸睿 Lec24</span> 
-  - 助教Week15 
+  - 助教 Week15 
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.12.17（周四）：**Lec25 Synchronization: Basic**
@@ -188,7 +188,7 @@ layout: default
   小班</span> 2026.12.23（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">赵伟硕 Lec25</span> 
   - <span style="background-color: #FFFF00; padding: 4px 4px">张峻硕 Lec26</span>
-  - 助教Week16
+  - 助教 Week16
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.12.24（周四）：<span style="color: red; font-weight: bold;">Lab测验 Lab1~Lab8</span> 
