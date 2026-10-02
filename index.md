@@ -57,9 +57,9 @@ layout: default
   大班</span> 2026.9.28（周一）：**Lec7 Machine Prog: Data** [[课件](resource/lecture/ICS07-machine-data-20260928.pdf)/[研讨+作业](resource/homework/ICS小班研讨题和作业题-第7讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.9.30（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">张睿超 Lec6</span> 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">张睿超 Lec6</span> [[课件](resource/seminar/Lec6.pptx)]
   - <span style="background-color: #FFFF00; padding: 4px 4px">王佳祺 Lec7</span> [[课件](resource/seminar/Lec7.pptx)]
-  - 助教 Week4 [[课件](resource/seminar/Week3.pptx)/[补充](https://en.wikipedia.org/wiki/Call-with-current-continuation)]
+  - 助教 Week4 [[课件](resource/seminar/Week4.pptx)/[补充](https://en.wikipedia.org/wiki/Call-with-current-continuation)]
 
 ## 第5周
 
