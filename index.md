@@ -13,10 +13,11 @@ layout: default
 
 # 重要通知
 
+- **2026.10.8：Lab3 已发布，截止时间为 10.22 8:00**
 - **2026.9.28：第 6、7 讲作业已发布，截止时间为 10.14 23:59**
-- **2026.9.23：第 4、5 讲作业已发布，截止时间为 10.7 23:59**
-- **2026.9.22：Lab2 已发布，截止时间为 10.13 23:59**
-- **2026.9.16：第 2、3 讲作业已发布，截止时间为 9.30 23:59**
+- 2026.9.23：第 4、5 讲作业已发布，截止时间为 10.7 23:59
+- **2026.9.22：Lab2 已发布，截止时间为 10.15 23:59**
+- 2026.9.16：第 2、3 讲作业已发布，截止时间为 9.30 23:59
 - 2026.9.13：Lab1 已发布，截止时间为 9.28 8:00
 - 2026.9.12：请尽快完成 xLab 平台节点创建并连接 VSCode
 
@@ -64,15 +65,15 @@ layout: default
 ## 第5周
 
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.10.8（周四）：**Lec8 Machine Prog: Advanced** 
+  大班</span> 2026.10.8（周四）：**Lec8 Machine Prog: Advanced** [[课件](resource/lecture/ICS08-machine-advanced-20261008.pdf)]
 
 ## 第6周
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.10.12（周一）：<span style="color: red; font-weight: bold;">阶段测验1 Lec1~Lec8</span> 
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.10.14（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">肖涵 Lec8</span> 
-  - 助教 Week6 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">肖涵 Lec8</span> [[课件](resource/seminar/Lec8.pptx)]
+  - 助教 Week6 [[课件](/resource/seminar/Week6.pptx)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.10.15（周四）：**Lec9 Processor Arch: ISA&Logic** 
