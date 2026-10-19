@@ -13,10 +13,11 @@ layout: default
 
 # 重要通知
 
+- **2026.10.19：第 9、10 讲作业已发布，截止时间为 10.28 23:59**
 - **2026.10.8：Lab3 已发布，截止时间为 10.22 8:00**
-- **2026.9.28：第 6、7 讲作业已发布，截止时间为 10.14 23:59**
+- 2026.9.28：第 6、7 讲作业已发布，截止时间为 10.14 23:59
 - 2026.9.23：第 4、5 讲作业已发布，截止时间为 10.7 23:59
-- **2026.9.22：Lab2 已发布，截止时间为 10.15 23:59**
+- 2026.9.22：Lab2 已发布，截止时间为 10.15 23:59
 - 2026.9.16：第 2、3 讲作业已发布，截止时间为 9.30 23:59
 - 2026.9.13：Lab1 已发布，截止时间为 9.28 8:00
 - 2026.9.12：请尽快完成 xLab 平台节点创建并连接 VSCode
@@ -76,11 +77,11 @@ layout: default
   - 助教 Week6 [[课件](/resource/seminar/Week6.pptx)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.10.15（周四）：**Lec9 Processor Arch: ISA&Logic** 
+  大班</span> 2026.10.15（周四）：**Lec9 Processor Arch: ISA&Logic** [[课件](resource/lecture/ICS09-Processor%20Arch-ISA&Logic-20261015.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第9讲.pdf)]
 
 ## 第7周
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.10.19（周一）：**Lec10 Processor Arch: Sequential** 
+  大班</span> 2026.10.19（周一）：**Lec10 Processor Arch: Sequential** [[课件](/resource/lecture/ICS10-Processor%20Arch-Sequential-20261019.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第10讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.10.21（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">赵伟硕 Lec9</span>
