@@ -13,6 +13,7 @@ layout: default
 
 # 重要通知
 
+- **2026.10.20：Lab4 已发布，截止时间为 11.3 23:59**
 - **2026.10.19：第 9、10 讲作业已发布，截止时间为 10.28 23:59**
 - **2026.10.8：Lab3 已发布，截止时间为 10.22 8:00**
 - 2026.9.28：第 6、7 讲作业已发布，截止时间为 10.14 23:59
@@ -84,9 +85,9 @@ layout: default
   大班</span> 2026.10.19（周一）：**Lec10 Processor Arch: Sequential** [[课件](/resource/lecture/ICS10-Processor%20Arch-Sequential-20261019.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第10讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.10.21（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">赵伟硕 Lec9</span>
-  - <span style="background-color: #FFFF00; padding: 4px 4px">彭在麟 Lec10</span>
-  - 助教 Week7
+  - <span style="background-color: #FFFF00; padding: 4px 4px">赵伟硕 Lec9</span> [[课件](/resource/seminar/Lec9.pptx)]
+  - <span style="background-color: #FFFF00; padding: 4px 4px">彭在麟 Lec10</span> [[课件](resource/seminar/Lec10.pptx)]
+  - 助教 Week7 [[课件](/resource/seminar/Week7.pptx)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.10.22（周四）：**Lec11 Processor Arch: Pipelined** 
