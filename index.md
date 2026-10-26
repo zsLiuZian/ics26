@@ -13,9 +13,10 @@ layout: default
 
 # 重要通知
 
+- **2026.10.26：第 11、12 讲作业已发布，截止时间为 11.4 23:59**
 - **2026.10.20：Lab4 已发布，截止时间为 11.3 23:59**
 - **2026.10.19：第 9、10 讲作业已发布，截止时间为 10.28 23:59**
-- **2026.10.8：Lab3 已发布，截止时间为 10.22 8:00**
+- 2026.10.8：Lab3 已发布，截止时间为 10.22 8:00
 - 2026.9.28：第 6、7 讲作业已发布，截止时间为 10.14 23:59
 - 2026.9.23：第 4、5 讲作业已发布，截止时间为 10.7 23:59
 - 2026.9.22：Lab2 已发布，截止时间为 10.15 23:59
@@ -90,11 +91,11 @@ layout: default
   - 助教 Week7 [[课件](/resource/seminar/Week7.pptx)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.10.22（周四）：**Lec11 Processor Arch: Pipelined** 
+  大班</span> 2026.10.22（周四）：**Lec11 Processor Arch: Pipelined** [[课件](/resource/lecture/ICS11-Processor%20Arch-Pipelined-20261022.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第11讲.pdf)]
 
 ## 第8周
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.10.26（周一）：**Lec12 The Memory Hierarchy** 
+  大班</span> 2026.10.26（周一）：**Lec12 The Memory Hierarchy** [[课件](/resource/lecture/ICS12-memory-hierarchy-20261026.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第12讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.10.28（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">吴煜祺 Lec11</span> 
