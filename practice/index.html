@@ -537,13 +537,18 @@ html[data-theme="dark"] .code-block { background: #11152a; }
 /* ==========================================================================
    题库浏览
    ========================================================================== */
-.bank-toolbar { display: flex; gap: 11px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
-.bank-toolbar .search { flex: 1; min-width: 220px; position: relative; }
+.bank-toolbar {
+  display: grid;
+  grid-template-columns: minmax(200px, 1.5fr) repeat(5, minmax(102px, 1fr));
+  gap: 10px; align-items: center; margin-bottom: 16px;
+}
+.bank-toolbar .search { position: relative; min-width: 0; }
 .bank-toolbar .search input { padding-left: 36px; }
 .bank-toolbar .search::before {
   content: "🔍"; position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
   font-size: 13px; opacity: .6; pointer-events: none;
 }
+.bank-toolbar select { width: 100%; min-width: 0; max-width: none; }
 
 .bank-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 13px; }
 .bank-item {
@@ -668,19 +673,163 @@ code.inline {
   color: var(--accent); white-space: nowrap;
 }
 
-/* ---------- 响应式 ---------- */
+/* ==========================================================================
+   响应式 —— 移动端适配 + 瀑布流
+   ========================================================================== */
+
+.only-mobile { display: none !important; }
+
+* { -webkit-tap-highlight-color: transparent; }
+
+/* 题库工具栏的 select 尺寸 */
+.bank-toolbar select { flex: 0 0 auto; }
+
+@media (hover: none) and (pointer: coarse) {
+  .btn:hover, .mode-card:hover, .lec-card:hover, .bank-item:hover, .opt:hover:not(.locked) {
+    transform: none; box-shadow: var(--shadow-sm);
+  }
+  .btn:active { transform: scale(.975); }
+  .opt:active:not(.locked) { background: var(--surface-3); }
+}
+
 @media (max-width: 900px) {
-  .practice-layout { grid-template-columns: 1fr; }
-  .sidebar { position: static; max-height: none; }
-  .hero { padding: 28px 24px; }
-  .hero h1 { font-size: 24px; }
-  .main { padding: 18px 14px 70px; }
-  .topbar-inner { padding: 9px 14px; gap: 10px; }
+
+  /* ---------- 顶部导航：品牌+图标一行，导航横向滚动 ---------- */
+  .topbar-inner {
+    flex-wrap: wrap; row-gap: 6px; column-gap: 8px;
+    padding: 8px 12px calc(8px + env(safe-area-inset-top, 0px));
+  }
+  .brand { flex: 1 1 0; min-width: 0; }
+  .brand-text { min-width: 0; }
+  .brand-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .brand-logo { width: 32px; height: 32px; border-radius: 9px; font-size: 11px; }
+  .brand-title { font-size: 14px; }
   .brand-sub { display: none; }
-  .nav-item { padding: 7px 10px; font-size: 13px; }
-  .form-row { grid-template-columns: 1fr; gap: 7px; }
-  .bar-row { grid-template-columns: 110px 1fr 48px; }
-  .exam-topbar { top: 66px; }
+  .nav {
+    order: 5; width: 100%; margin-left: 0; gap: 2px;
+    flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain;
+    scrollbar-width: none; -ms-overflow-style: none; padding-bottom: 1px;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav-item { flex: 0 0 auto; padding: 7px 11px; font-size: 13px; border-radius: 9px; }
+  .icon-btn { width: 34px; height: 34px; font-size: 15px; border-radius: 9px; }
+
+  /* ---------- 主容器 ---------- */
+  .main { padding: 16px 12px calc(72px + env(safe-area-inset-bottom, 0px)); }
+  .only-mobile { display: inline-flex !important; }
+
+  /* ---------- 瀑布流网格（题库 / 错题本 / 收藏） ---------- */
+  .bank-grid { display: block; column-width: 148px; column-gap: 10px; }
+  .bank-grid > * {
+    break-inside: avoid; -webkit-column-break-inside: avoid; page-break-inside: avoid;
+    display: inline-block; width: 100%; margin: 0 0 10px; vertical-align: top;
+  }
+  .bank-item { padding: 11px 11px 10px; gap: 7px; border-radius: 12px; }
+  .bank-item .bi-topic, .bank-item .bi-type, .bank-item .bi-diff, .bank-item .bi-star { display: none; }
+  .bank-item .bi-self { display: none; }
+  .qfoot [data-goto-bank] { display: none; }
+  .bank-item .bi-stem { font-size: 12.8px; line-height: 1.62; -webkit-line-clamp: 4; line-clamp: 4; }
+  .bank-item .tag { font-size: 10.5px; padding: 2px 6px; border-radius: 5px; }
+  .bank-item .bi-foot { gap: 4px; }
+
+  /* ---------- 题库工具栏：搜索独占一行，下拉两列 ---------- */
+  .bank-toolbar { display: flex; flex-wrap: wrap; gap: 8px; }
+  .bank-toolbar .search { flex: 1 1 100%; min-width: 0; }
+  .bank-toolbar select { flex: 1 1 calc(50% - 4px); min-width: 0; max-width: none; font-size: 13px; }
+
+  /* ---------- 刷题：题目优先，筛选面板可折叠 ---------- */
+  .practice-layout { display: flex; flex-direction: column; gap: 12px; }
+  .practice-layout .qwrap { order: 1; }
+  .practice-layout .sidebar { order: 2; }
+  .sidebar { display: none; position: static; max-height: none; padding: 14px; }
+  .sidebar.open { display: flex; }
+  .sidebar .lec-list { max-height: 240px; }
+
+  /* ---------- 题目卡片 ---------- */
+  .qcard { padding: 15px 14px; border-radius: 13px; }
+  .stem, .opt .txt, .explain-body, .bank-item .bi-stem { overflow-wrap: anywhere; word-break: break-word; }
+  code.inline { white-space: normal; }
+  .math { white-space: normal; }
+  .qmeta { gap: 5px; margin-bottom: 11px; }
+  .qmeta .tag { font-size: 11px; padding: 2px 7px; }
+  .q-index { font-size: 11px; }
+  .stem { font-size: 15px; line-height: 1.78; margin-bottom: 12px; }
+  .code-block { font-size: 11.8px; padding: 10px 11px; border-radius: 8px; }
+  .options { gap: 8px; }
+  .opt { font-size: 14.5px; padding: 11px 12px; gap: 9px; border-radius: 10px; }
+  .opt .key { width: 23px; height: 23px; font-size: 11.5px; }
+  .explain-body { font-size: 13.8px; padding: 12px 13px; }
+  .explain-head { padding: 9px 13px; font-size: 12.5px; flex-wrap: wrap; gap: 6px; }
+  .note-box { padding: 10px 11px; }
+  .note-box textarea { font-size: 13px; }
+
+  .qfoot { gap: 7px; margin-top: 14px; }
+  .qfoot .btn { padding: 9px 13px; font-size: 13.5px; }
+  .qfoot [data-prev], .qfoot [data-next] { flex: 1 1 0; }
+  .qfoot .spacer { display: none; }
+  .qfoot .btn-sm { flex: 1 1 auto; }
+
+  .progress-strip { padding: 9px 12px; gap: 8px; flex-wrap: wrap; }
+  .progress-strip .txt { font-size: 12px; }
+  .progress-strip .mini-bar { min-width: 60px; }
+
+  /* ---------- 考试 ---------- */
+  .exam-topbar { position: static; flex-wrap: wrap; gap: 10px; padding: 11px 13px; }
+  .exam-timer { font-size: 21px; }
+  .exam-setup { padding: 18px 14px; }
+  .form-row { grid-template-columns: 1fr; gap: 7px; padding: 11px 0; }
+  .sheet-grid { grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)); }
+
+  /* ---------- 弹窗：底部抽屉 ---------- */
+  .modal-host { padding: 0; align-items: flex-end; }
+  .modal {
+    max-height: 90vh; width: 100%; max-width: none;
+    border-radius: 18px 18px 0 0; border-left: 0; border-right: 0; border-bottom: 0;
+  }
+  .modal-head { padding: 15px 16px; }
+  .modal-body { padding: 16px; }
+  .modal-foot { padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); flex-wrap: wrap; }
+  .modal-foot .btn { flex: 1 1 auto; }
+
+  /* ---------- 首页 ---------- */
+  .hero { padding: 24px 18px; border-radius: 18px; margin-bottom: 18px; }
+  .hero h1 { font-size: 22px; }
+  .hero p { font-size: 13.5px; }
+  .hero-stats { gap: 18px 22px; margin-bottom: 18px; }
+  .hero-stat b { font-size: 22px; }
+  .hero-stat span { font-size: 11.5px; }
+  .hero-actions .btn { flex: 1 1 calc(50% - 6px); padding: 11px 14px; font-size: 14px; }
+  .hero::before { display: none; }
+
+  .section-head h2 { font-size: 18px; }
+  .section-head p { font-size: 12.5px; flex-basis: 100%; }
+  .grid.g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mode-card { padding: 15px; }
+  .mode-icon { width: 38px; height: 38px; font-size: 18px; }
+  .mode-card h3 { font-size: 14.5px; }
+  .mode-card p { font-size: 12px; }
+  .lec-card { padding: 13px; }
+
+  /* ---------- 统计 ---------- */
+  .stat-tile { padding: 15px 16px; }
+  .stat-tile .st-value { font-size: 25px; }
+  .bar-row { grid-template-columns: minmax(78px, 34%) 1fr 46px; gap: 8px; font-size: 12px; }
+  .heat-grid { grid-template-columns: repeat(auto-fill, minmax(28px, 1fr)); gap: 4px; }
+
+  /* ---------- 其他 ---------- */
+  .pager { gap: 6px; }
+  .pager button { min-width: 32px; height: 32px; font-size: 12px; }
+  .toast-host { bottom: calc(20px + env(safe-area-inset-bottom, 0px)); }
+  .toast { font-size: 13px; padding: 9px 15px; }
+  .empty { padding: 44px 18px; }
+}
+
+@media (max-width: 420px) {
+  .bank-grid { column-width: 132px; column-gap: 8px; }
+  .bank-grid > * { margin-bottom: 8px; }
+  .hero-stat b { font-size: 20px; }
+  .nav-item { padding: 6px 9px; font-size: 12.5px; }
+  .icon-btn { width: 32px; height: 32px; }
 }
 
 @media print {
@@ -1680,7 +1829,7 @@ window.__ICS_LECTURES__ = [
      8. 视图：刷题
      ====================================================================== */
 
-  var P = { pool: [], order: [], idx: 0, states: {}, ctxName: '' };
+  var P = { pool: [], order: [], idx: 0, states: {}, ctxName: '', sideOpen: false };
 
   function buildPool(opts) {
     opts = opts || {};
@@ -1712,7 +1861,7 @@ window.__ICS_LECTURES__ = [
     var h = [];
 
     // 侧栏
-    h.push('<aside class="card sidebar">');
+    h.push('<aside class="card sidebar' + (P.sideOpen ? ' open' : '') + '">');
     h.push('<div class="side-group"><span class="side-label">快速筛选</span><div class="chip-row">');
     h.push('<button class="chip' + (F.onlyWrong ? ' on' : '') + '" data-f="onlyWrong">错题本 <span class="c-count">' + Object.keys(DB.wrong).length + '</span></button>');
     h.push('<button class="chip' + (F.onlyStar ? ' on' : '') + '" data-f="onlyStar">收藏 <span class="c-count">' + Object.keys(DB.star).length + '</span></button>');
@@ -1773,6 +1922,7 @@ window.__ICS_LECTURES__ = [
            '<span class="tag tag-accent">' + esc(P.ctxName) + '</span>' +
            '<span class="txt" id="pProg"></span>' +
            '<span class="mini-bar" style="flex:1"><i id="pBar" style="width:0%"></i></span>' +
+           '<button class="btn btn-sm only-mobile" data-toggle-side="1">🔎 筛选</button>' +
            '<button class="btn btn-sm" data-relaunch="random">🎲 随机</button>' +
            '<button class="btn btn-sm" data-relaunch="seq">📚 顺序</button>' +
            '</div>');
@@ -2322,59 +2472,72 @@ window.__ICS_LECTURES__ = [
      10. 视图：题库 / 错题本
      ====================================================================== */
 
-  var BANK = { page: 1, per: 24, list: [], mode: 'bank' };
+  var BANK = { page: { bank: 1, wrong: 1, star: 1 }, per: 24, mode: 'bank' };
+
+  function bankRoot(mode) { return $('#view-' + (mode || BANK.mode)); }
 
   function viewBank(mode) {
     BANK.mode = mode || 'bank';
-    BANK.page = 1;
+    BANK.page[BANK.mode] = 1;
     return renderBankHTML(BANK.mode);
   }
 
   function renderBankHTML(mode) {
     var h = [];
-    h.push('<div class="section-head"><h2>' + (mode === 'wrong' ? '错题本' : mode === 'star' ? '收藏夹' : '题库浏览') + '</h2>' +
-           '<p id="bankCount"></p><span class="spacer"></span>' +
-           (mode === 'wrong' ? '<button class="btn btn-sm" data-bank-act="practice-wrong">开始重做错题</button>' : '') +
-           (mode === 'star' ? '<button class="btn btn-sm" data-bank-act="practice-star">开始刷收藏题</button>' : '') +
-           (mode === 'wrong' ? '<button class="btn btn-sm btn-danger" data-bank-act="clear-wrong">清空错题本</button>' : '') +
+    var title = mode === 'wrong' ? '错题本' : mode === 'star' ? '收藏夹' : '题库浏览';
+    var sub = mode === 'wrong' ? '答错过的题都会自动收进这里，可按讲次/知识点/题型筛选后集中攻克'
+            : mode === 'star' ? '用 ★ 收藏的题目，可随时回来精练'
+            : '全部题目，支持按讲次、知识点、题型、难度、来源筛选与搜索';
+    h.push('<div class="section-head"><h2>' + title + '</h2><p>' + sub + '</p>' +
+           '<span class="spacer"></span>' +
+           '<b data-bk="count" style="font-size:13px;color:var(--text-2)"></b>' +
+           (mode === 'wrong' ? '<button class="btn btn-sm btn-primary" data-bank-act="practice-wrong">开始重做</button>' : '') +
+           (mode === 'star' ? '<button class="btn btn-sm btn-primary" data-bank-act="practice-star">开始精练</button>' : '') +
+           (mode === 'wrong' ? '<button class="btn btn-sm btn-danger" data-bank-act="clear-wrong">清空</button>' : '') +
            '</div>');
     h.push('<div class="bank-toolbar">');
-    h.push('<div class="search"><input type="search" id="bankSearch" placeholder="搜索题干 / 知识点 / 标签 / 解析..."></div>');
-    h.push('<select id="bankLec" style="width:190px"><option value="">全部讲次</option>' +
+    h.push('<div class="search"><input type="search" data-bk="q" placeholder="搜索题干 / 知识点 / 标签 / 解析..."></div>');
+    h.push('<select data-bk="lec"><option value="">全部讲次</option>' +
            LECTURES.map(function (l) {
              var n = QUESTIONS.filter(function (q) { return q.lecture === l.n; }).length;
              return n ? '<option value="' + l.n + '">第 ' + l.n + ' 讲 · ' + esc(l.title) + '（' + n + '）</option>' : '';
            }).join('') + '</select>');
-    h.push('<select id="bankKp" style="width:170px"><option value="">全部知识点</option>' +
+    h.push('<select data-bk="kp"><option value="">全部知识点</option>' +
            Object.keys(KPS).sort(function (a, b) { return KPS[b].length - KPS[a].length; })
              .map(function (k) { return '<option value="' + esc(k) + '">' + esc(k) + '（' + KPS[k].length + '）</option>'; }).join('') +
            '</select>');
-    h.push('<select id="bankType" style="width:130px"><option value="">全部题型</option>' +
+    h.push('<select data-bk="type"><option value="">全部题型</option>' +
            Object.keys(TYPE_NAME).map(function (t) { return '<option value="' + t + '">' + TYPE_NAME[t] + '</option>'; }).join('') +
            '</select>');
-    h.push('<select id="bankOrigin" style="width:130px"><option value="all">全部来源</option>' +
+    h.push('<select data-bk="origin"><option value="all">全部来源</option>' +
            '<option value="exam">历年真题</option><option value="created">自编题</option></select>');
-    h.push('<select id="bankSort" style="width:150px">' +
+    h.push('<select data-bk="sort">' +
            '<option value="default">默认顺序</option><option value="diff-asc">难度：易→难</option>' +
            '<option value="diff-desc">难度：难→易</option><option value="lecture">按讲次排序</option>' +
            '<option value="unseen">未做过的优先</option><option value="wrong">错误最多的优先</option></select>');
     h.push('</div>');
-    h.push('<div id="bankList" class="bank-grid"></div>');
-    h.push('<div class="pager" id="bankPager"></div>');
+    h.push('<div class="bank-grid" data-bk="list"></div>');
+    h.push('<div class="pager" data-bk="pager"></div>');
     return h.join('');
   }
 
-  function currentBankList() {
-    var s = $('#bankSearch') ? $('#bankSearch').value : '';
-    var lec = $('#bankLec') ? $('#bankLec').value : '';
-    var kpv = $('#bankKp') ? $('#bankKp').value : '';
-    var type = $('#bankType') ? $('#bankType').value : '';
-    var org = $('#bankOrigin') ? $('#bankOrigin').value : 'all';
-    var sort = $('#bankSort') ? $('#bankSort').value : 'default';
+  function currentBankList(mode) {
+    var root = bankRoot(mode);
+    if (!root) return [];
+    function val(role, dflt) {
+      var e = root.querySelector('[data-bk="' + role + '"]');
+      return e ? e.value : dflt;
+    }
+    var s = val('q', '');
+    var lec = val('lec', '');
+    var kpv = val('kp', '');
+    var type = val('type', '');
+    var org = val('origin', 'all');
+    var sort = val('sort', 'default');
     var kw = s.trim().toLowerCase();
     var list = QUESTIONS.filter(function (q) {
-      if (BANK.mode === 'wrong' && !DB.wrong[q.id]) return false;
-      if (BANK.mode === 'star' && !DB.star[q.id]) return false;
+      if (mode === 'wrong' && !DB.wrong[q.id]) return false;
+      if (mode === 'star' && !DB.star[q.id]) return false;
       if (lec && q.lecture !== +lec) return false;
       if (kpv && q.kp !== kpv) return false;
       if (type && q.type !== type) return false;
@@ -2394,20 +2557,31 @@ window.__ICS_LECTURES__ = [
     return list;
   }
 
-  function paintBank() {
-    var list = currentBankList();
-    var host = $('#bankList');
+  function paintBank(mode) {
+    mode = mode || BANK.mode;
+    var root = bankRoot(mode);
+    if (!root) return;
+    var list = currentBankList(mode);
+    var host = root.querySelector('[data-bk="list"]');
+    var pager = root.querySelector('[data-bk="pager"]');
+    var cnt = root.querySelector('[data-bk="count"]');
     if (!host) return;
-    var cnt = $('#bankCount');
     if (cnt) cnt.textContent = '共 ' + list.length + ' 道题';
     var pages = Math.max(1, Math.ceil(list.length / BANK.per));
-    if (BANK.page > pages) BANK.page = pages;
-    var slice = list.slice((BANK.page - 1) * BANK.per, BANK.page * BANK.per);
+    if (BANK.page[mode] > pages) BANK.page[mode] = pages;
+    var page = BANK.page[mode];
+    var slice = list.slice((page - 1) * BANK.per, page * BANK.per);
 
     if (!list.length) {
-      host.innerHTML = '<div class="card empty" style="grid-column:1/-1"><div class="e-icon">🔍</div>' +
-        '<h3>没有找到题目</h3><p>换个关键词，或清空筛选条件试试。</p></div>';
-      $('#bankPager').innerHTML = '';
+      var emptyTitle = mode === 'wrong' ? '错题本还是空的' : mode === 'star' ? '还没有收藏题目' : '没有找到题目';
+      var emptySub = mode === 'wrong' ? '去「刷题」里答几道题，答错的会自动收进来。'
+                   : mode === 'star' ? '在题目右上角点 ☆ 就能收藏，之后回来集中看。'
+                   : '换个关键词，或清空筛选条件试试。';
+      host.innerHTML = '<div class="card empty" style="grid-column:1/-1;width:100%"><div class="e-icon">' +
+        (mode === 'wrong' ? '🩹' : mode === 'star' ? '🔖' : '🔍') + '</div>' +
+        '<h3>' + emptyTitle + '</h3><p>' + emptySub + '</p>' +
+        '<button class="btn btn-primary" data-mode="start-sequential">去刷题</button></div>';
+      if (pager) pager.innerHTML = '';
       return;
     }
 
@@ -2418,31 +2592,31 @@ window.__ICS_LECTURES__ = [
       return '<div class="card bank-item" data-qid="' + esc(q.id) + '">' +
         '<div class="bi-foot">' +
         '<span class="tag tag-accent">第 ' + q.lecture + ' 讲</span>' +
-        '<span class="tag tag-info">' + esc(q.kp) + '</span>' +
-        '<span class="tag">' + esc(q.topic) + '</span>' +
-        '<span class="tag">' + esc(TYPE_NAME[q.type]) + '</span>' +
-        '<span class="tag tag-warn">' + '★'.repeat(q.difficulty) + '</span>' +
+        '<span class="tag tag-info bi-kp">' + esc(q.kp) + '</span>' +
+        '<span class="tag bi-topic">' + esc(q.topic) + '</span>' +
+        '<span class="tag bi-type">' + esc(TYPE_NAME[q.type]) + '</span>' +
+        '<span class="tag tag-warn bi-diff">' + '★'.repeat(q.difficulty) + '</span>' +
         status +
-        (DB.star[q.id] ? '<span class="tag tag-warn">★</span>' : '') +
+        (DB.star[q.id] ? '<span class="tag tag-warn bi-star">★</span>' : '') +
         '</div>' +
         '<div class="bi-stem">' + rich(q.stem) + '</div>' +
         '<div class="bi-foot" style="color:var(--text-3);font-size:12px">' +
         '<span>' + esc(q.source || '') + '</span>' +
-        (q.origin === 'created' ? '<span class="tag tag-ok">自编</span>' : '') +
+        (q.origin === 'created' ? '<span class="tag tag-ok bi-self">自编</span>' : '') +
         '</div></div>';
     }).join('');
 
-    // 分页
+    if (!pager) return;
     var p = [];
-    p.push('<button data-page="1"' + (BANK.page === 1 ? ' disabled' : '') + '>«</button>');
-    p.push('<button data-page="' + (BANK.page - 1) + '"' + (BANK.page === 1 ? ' disabled' : '') + '>‹</button>');
-    var from = Math.max(1, BANK.page - 2), to = Math.min(pages, from + 4);
+    p.push('<button data-page="1"' + (page === 1 ? ' disabled' : '') + '>«</button>');
+    p.push('<button data-page="' + (page - 1) + '"' + (page === 1 ? ' disabled' : '') + '>‹</button>');
+    var from = Math.max(1, page - 2), to = Math.min(pages, from + 4);
     from = Math.max(1, to - 4);
-    for (var i = from; i <= to; i++) p.push('<button data-page="' + i + '"' + (i === BANK.page ? ' class="on"' : '') + '>' + i + '</button>');
-    p.push('<button data-page="' + (BANK.page + 1) + '"' + (BANK.page === pages ? ' disabled' : '') + '>›</button>');
-    p.push('<button data-page="' + pages + '"' + (BANK.page === pages ? ' disabled' : '') + '>»</button>');
-    p.push('<span style="margin-left:12px;color:var(--text-3);font-size:12.5px">第 ' + BANK.page + ' / ' + pages + ' 页</span>');
-    $('#bankPager').innerHTML = p.join('');
+    for (var i = from; i <= to; i++) p.push('<button data-page="' + i + '"' + (i === page ? ' class="on"' : '') + '>' + i + '</button>');
+    p.push('<button data-page="' + (page + 1) + '"' + (page === pages ? ' disabled' : '') + '>›</button>');
+    p.push('<button data-page="' + pages + '"' + (page === pages ? ' disabled' : '') + '>»</button>');
+    p.push('<span style="margin-left:12px;color:var(--text-3);font-size:12.5px">第 ' + page + ' / ' + pages + ' 页</span>');
+    pager.innerHTML = p.join('');
   }
 
   function openBankDetail(qid) {
@@ -2852,14 +3026,14 @@ window.__ICS_LECTURES__ = [
   }
 
   function bindBank(mode) {
-    var v = $('#view-' + mode);
+    var v = bankRoot(mode);
     if (!v) return;
-    ['bankSearch', 'bankLec', 'bankKp', 'bankType', 'bankOrigin', 'bankSort'].forEach(function (idn) {
-      var e = $('#' + idn);
+    ['q', 'lec', 'kp', 'type', 'origin', 'sort'].forEach(function (role) {
+      var e = v.querySelector('[data-bk="' + role + '"]');
       if (!e) return;
-      var ev = idn === 'bankSearch' ? 'input' : 'change';
-      var h = function () { BANK.page = 1; refreshBank(mode); };
-      e.addEventListener(ev, idn === 'bankSearch' ? debounce(h, 200) : h);
+      var ev = role === 'q' ? 'input' : 'change';
+      var h = function () { BANK.page[mode] = 1; refreshBank(mode); };
+      e.addEventListener(ev, role === 'q' ? debounce(h, 200) : h);
     });
     $$('[data-bank-act]', v).forEach(function (b) {
       b.addEventListener('click', function () {
@@ -2872,20 +3046,26 @@ window.__ICS_LECTURES__ = [
         }
       });
     });
+    if (mode === 'wrong') {
+      var s = v.querySelector('[data-bk="sort"]');
+      if (s) s.value = 'wrong';
+    }
     refreshBank(mode);
   }
 
   function refreshBank(mode) {
-    paintBank();
-    var v = $('#view-' + mode);
+    paintBank(mode);
+    var v = bankRoot(mode);
     if (!v) return;
     $$('[data-qid]', v).forEach(function (c) {
       c.addEventListener('click', function () { openBankDetail(c.getAttribute('data-qid')); });
     });
-    $$('[data-page]', $('#bankPager')).forEach(function (b) {
+    var pager = v.querySelector('[data-bk="pager"]');
+    if (!pager) return;
+    $$('[data-page]', pager).forEach(function (b) {
       b.addEventListener('click', function () {
         if (b.disabled) return;
-        BANK.page = parseInt(b.getAttribute('data-page'), 10);
+        BANK.page[mode] = parseInt(b.getAttribute('data-page'), 10);
         refreshBank(mode); window.scrollTo(0, 0);
       });
     });
@@ -2972,6 +3152,17 @@ window.__ICS_LECTURES__ = [
       b.addEventListener('click', function () {
         var k = b.getAttribute('data-relaunch');
         startPractice({ shuffle: k === 'random', name: k === 'random' ? '随机练习' : '顺序练习' });
+      });
+    });
+    $$('[data-toggle-side]', v).forEach(function (b) {
+      b.addEventListener('click', function () {
+        P.sideOpen = !P.sideOpen;
+        var sb = v.querySelector('.sidebar');
+        if (sb) sb.classList.toggle('open', P.sideOpen);
+        b.classList.toggle('btn-primary', P.sideOpen);
+        if (P.sideOpen && sb) {
+          try { sb.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { }
+        }
       });
     });
   }
@@ -3235,6 +3426,11 @@ window.__ICS_LECTURES__ = [
     $('#view-bank').innerHTML = viewBank('bank');
     $('#view-wrong').innerHTML = viewBank('wrong');
     $('#view-star').innerHTML = viewBank('star');
+
+    // 预渲染刷题视图：否则从导航「刷题」直接进入会是一片空白
+    P.pool = QUESTIONS.slice();
+    P.ctxName = '顺序练习';
+    renderPractice();
 
     bindCommon(document);
     bindBank('bank'); bindBank('wrong'); bindBank('star');

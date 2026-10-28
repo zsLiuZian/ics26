@@ -10,7 +10,7 @@ layout: default
 - 助教：刘梓安 aiiaa@stu.pku.edu.cn 15018014105
 - 上课时间：每周三第10\~11节（18:40\~20:30）
 - 上课地点：地学楼 207
-- [练习](practice)
+- [练习](practice/index.html)
 
 # 重要通知
 
@@ -99,9 +99,9 @@ layout: default
   大班</span> 2026.10.26（周一）：**Lec12 The Memory Hierarchy** [[课件](/resource/lecture/ICS12-memory-hierarchy-20261026.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第12讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.10.28（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">吴煜祺 Lec11</span> 
-  - <span style="background-color: #FFFF00; padding: 4px 4px">张峻硕 Lec12</span> 
-  - 助教 Week8 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">吴煜祺 Lec11</span> [[课件](resource/seminar/Lec11.pdf)]
+  - <span style="background-color: #FFFF00; padding: 4px 4px">张峻硕 Lec12</span> [[课件](resource/seminar/Lec12.pptx)]
+  - 助教 Week8 [[课件](/resource/seminar/Week8.pptx)]
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.10.29（周四）：**Lec13 Cache Memories** 
 
