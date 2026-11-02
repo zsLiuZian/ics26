@@ -14,9 +14,11 @@ layout: default
 
 # 重要通知
 
+- **2026.11.2：第 13、14 讲作业已发布，截止时间为 11.11 23:59**
+- **2026.10.28：Lab5 已发布，截止时间为 11.12 23:59**
 - **2026.10.26：第 11、12 讲作业已发布，截止时间为 11.4 23:59**
 - **2026.10.20：Lab4 已发布，截止时间为 11.3 23:59**
-- **2026.10.19：第 9、10 讲作业已发布，截止时间为 10.28 23:59**
+- 2026.10.19：第 9、10 讲作业已发布，截止时间为 10.28 23:59
 - 2026.10.8：Lab3 已发布，截止时间为 10.22 8:00
 - 2026.9.28：第 6、7 讲作业已发布，截止时间为 10.14 23:59
 - 2026.9.23：第 4、5 讲作业已发布，截止时间为 10.7 23:59
@@ -103,11 +105,11 @@ layout: default
   - <span style="background-color: #FFFF00; padding: 4px 4px">张峻硕 Lec12</span> [[课件](resource/seminar/Lec12.pptx)]
   - 助教 Week8 [[课件](/resource/seminar/Week8.pptx)]
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.10.29（周四）：**Lec13 Cache Memories** 
+  大班</span> 2026.10.29（周四）：**Lec13 Cache Memories** [[课件](/resource/lecture/ICS13-cache-memories-20261029.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第13讲.pdf)]
 
 ## 第9周
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.11.2（周一）：**Lec14 Program optimization**
+  大班</span> 2026.11.2（周一）：**Lec14 Program optimization** [[课件](/resource/lecture/ICS14-optimization-20261102.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第14讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.11.4（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">郑周涵予 Lec13</span> 
