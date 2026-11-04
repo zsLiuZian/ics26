@@ -10,14 +10,14 @@ layout: default
 - 助教：刘梓安 aiiaa@stu.pku.edu.cn 15018014105
 - 上课时间：每周三第10\~11节（18:40\~20:30）
 - 上课地点：地学楼 207
-- [练习](practice/index.html)
+- [ICS 题库](practice/index.html)
 
 # 重要通知
 
 - **2026.11.2：第 13、14 讲作业已发布，截止时间为 11.11 23:59**
 - **2026.10.28：Lab5 已发布，截止时间为 11.12 23:59**
 - **2026.10.26：第 11、12 讲作业已发布，截止时间为 11.4 23:59**
-- **2026.10.20：Lab4 已发布，截止时间为 11.3 23:59**
+- 2026.10.20：Lab4 已发布，截止时间为 11.3 23:59
 - 2026.10.19：第 9、10 讲作业已发布，截止时间为 10.28 23:59
 - 2026.10.8：Lab3 已发布，截止时间为 10.22 8:00
 - 2026.9.28：第 6、7 讲作业已发布，截止时间为 10.14 23:59
@@ -112,9 +112,9 @@ layout: default
   大班</span> 2026.11.2（周一）：**Lec14 Program optimization** [[课件](/resource/lecture/ICS14-optimization-20261102.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第14讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.11.4（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">郑周涵予 Lec13</span> 
-  - <span style="background-color: #FFFF00; padding: 4px 4px">王振恺 Lec14</span> 
-  - 助教 Week9 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">郑周涵予 Lec13</span> [[课件](/resource/seminar/Lec13.pptx)]
+  - <span style="background-color: #FFFF00; padding: 4px 4px">王振恺 Lec14</span> [[课件](/resource/seminar/Lec14.pptx)]
+  - 助教 Week9 [[课件](/resource/seminar/Week9.pptx)/[THUWC2020：简单 Cache 系统实现](/resource/seminar/THUWC2020_Cache.zip)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.11.5（周四）：**Lec15 Linking** 
