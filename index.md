@@ -14,9 +14,11 @@ layout: default
 
 # 重要通知
 
+- **2026.11.11: 第 15、16 讲作业已发布，截止时间为 11.25 23:59**
+- **2026.11.9: Lab6 已发布，截止时间为 11.26 23:59**
 - **2026.11.2：第 13、14 讲作业已发布，截止时间为 11.11 23:59**
 - **2026.10.28：Lab5 已发布，截止时间为 11.12 23:59**
-- **2026.10.26：第 11、12 讲作业已发布，截止时间为 11.4 23:59**
+- 2026.10.26：第 11、12 讲作业已发布，截止时间为 11.4 23:59
 - 2026.10.20：Lab4 已发布，截止时间为 11.3 23:59
 - 2026.10.19：第 9、10 讲作业已发布，截止时间为 10.28 23:59
 - 2026.10.8：Lab3 已发布，截止时间为 10.22 8:00
@@ -66,7 +68,7 @@ layout: default
   小班</span> 2026.9.30（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">张睿超 Lec6</span> [[课件](resource/seminar/Lec6.pptx)]
   - <span style="background-color: #FFFF00; padding: 4px 4px">王佳祺 Lec7</span> [[课件](resource/seminar/Lec7.pptx)]
-  - 助教 Week4 [[课件](resource/seminar/Week4.pptx)/[补充](https://en.wikipedia.org/wiki/Call-with-current-continuation)]
+  - 助教 Week4 [[课件](resource/seminar/Week4.pptx)/[补充：Call with Current Continuation](https://en.wikipedia.org/wiki/Call-with-current-continuation)]
 
 ## 第5周
 
@@ -117,16 +119,16 @@ layout: default
   - 助教 Week9 [[课件](/resource/seminar/Week9.pptx)/[THUWC2020：简单 Cache 系统实现](/resource/seminar/THUWC2020_Cache.zip)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.11.5（周四）：**Lec15 Linking** 
+  大班</span> 2026.11.5（周四）：**Lec15 Linking** [[课件](/resource/lecture/ICS15-linking-20261105.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第15讲.pdf)]
 
 ## 第10周
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.11.9（周一）：**Lec16 ECF: Exceptions & Processes**
+  大班</span> 2026.11.9（周一）：**Lec16 ECF: Exceptions & Processes** [[课件](/resource/lecture/ICS16-ECF1-20261109.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第16讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.11.11（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">吕俊辰 Lec15</span> 
-  - <span style="background-color: #FFFF00; padding: 4px 4px">聂于涵 Lec16</span> 
-  - 助教 Week10 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">吕俊辰 Lec15</span> [[课件](/resource/seminar/Lec15.pptx)]
+  - <span style="background-color: #FFFF00; padding: 4px 4px">聂于涵 Lec16</span> [[课件](/resource/seminar/Lec16.pptx)]
+  - 助教 Week10 [[课件](/resource/seminar/Week10.pptx)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.11.12（周四）：**Lec17 ECF: Signals & Nonlocal Jumps**
