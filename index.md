@@ -138,25 +138,25 @@ layout: default
   大班</span> 2026.11.16（周一）：<span style="color: red; font-weight: bold;">阶段测验2 Lec9~Lec17</span> 
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.11.18（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">叶尔努尔 Lec17</span> 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">叶尔努尔 Lec17</span> [[课件](/resource/seminar/Lec17.pptx)]
   - 助教 Week11 [[课件](/resource/seminar/Week11.pptx)]
   
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.11.19（周四）：**Lec18 System Level I/O**
+  大班</span> 2026.11.19（周四）：**Lec18 System Level I/O** [[课件](/resource/lecture/ICS18-SysIO-20261119.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第18讲.pdf)]
 
 ## 第12周
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.11.23（周一）：**Lec19 Virtual Memory: Concepts**
+  大班</span> 2026.11.23（周一）：**Lec19 Virtual Memory: Concepts** [[课件](/resource/lecture/ICS19-VM1-20261123.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第19讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.11.25（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">陈高远 Lec18</span> 
   - 助教 Week12 
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.11.26（周四）：**Lec20 Virtual Memory: Systems**
+  大班</span> 2026.11.26（周四）：**Lec20 Virtual Memory: Systems** [[课件](/resource/lecture/ICS20-VM2-20261126.pdf)]
 
 ## 第13周
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
-  大班</span> 2026.11.30（周一）：**Lec21 Dynamic Memory Allocation**
+  大班</span> 2026.11.30（周一）：**Lec21 Dynamic Memory Allocation** [[课件](/resource/lecture/ICS21-DMM-20261130.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.12.2（周三）：
   - <span style="background-color: #FFFF00; padding: 4px 4px">金于珑 Lec19</span> 
