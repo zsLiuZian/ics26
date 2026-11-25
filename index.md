@@ -14,6 +14,7 @@ layout: default
 
 # 重要通知
 
+- **2026.11.23：第 18、19 讲作业已发布，截止时间为 12.2 23:59**
 - **2026.11.11: 第 15、16 讲作业已发布，截止时间为 11.25 23:59**
 - **2026.11.9: Lab6 已发布，截止时间为 11.26 23:59**
 - 2026.11.2：第 13、14 讲作业已发布，截止时间为 11.11 23:59
@@ -149,8 +150,8 @@ layout: default
   大班</span> 2026.11.23（周一）：**Lec19 Virtual Memory: Concepts** [[课件](/resource/lecture/ICS19-VM1-20261123.pdf)/[研讨+作业](/resource/homework/ICS小班研讨题和作业题-第19讲.pdf)]
 - <span style="background-color: #d10b3cff; border-radius: 8px; padding: 4px 4px; color: white">
   小班</span> 2026.11.25（周三）：
-  - <span style="background-color: #FFFF00; padding: 4px 4px">陈高远 Lec18</span> 
-  - 助教 Week12 
+  - <span style="background-color: #FFFF00; padding: 4px 4px">陈高远 Lec18</span> [[课件](/resource/seminar/Lec18.pptx)] 
+  - 助教 Week12 [[课件](/resource/seminar/Week12.pptx)]
 - <span style="background-color: #262680ff; border-radius: 8px; padding: 4px 4px; color: white">
   大班</span> 2026.11.26（周四）：**Lec20 Virtual Memory: Systems** [[课件](/resource/lecture/ICS20-VM2-20261126.pdf)]
 
